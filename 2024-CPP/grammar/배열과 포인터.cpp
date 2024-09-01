@@ -15,8 +15,14 @@ int main(void) {
 	char* pc = &c;
 	double* pd = &d;
 
+	// 각각 4, 1, 8 차이
 	printf("%d %d %d \n", pi, pc, pd);
 	printf("%d %d %d \n", pi+1, pc + 1, pd + 1);
 
+	pi = arr;
+	printf("%d %d \n", pi, arr);
+	printf("%d %d \n", pi+1, arr+1);
+	printf("%d %d \n", *(pi + 1), *(arr + 1));
+	printf("%d %d \n", pi[1], arr[1]);
 	return 0;
 }
