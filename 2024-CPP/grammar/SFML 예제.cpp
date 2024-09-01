@@ -1,18 +1,10 @@
-﻿#include <iostream>
+﻿#include <SFML/Graphics.hpp>
 
-using namespace std;
+int main() {
 
-void call_by_reference(int& val)
-{
-	// 새로운 지역변수 val를 만들고 val가 가리키고 있는 대상의 값을 바꾼다.
-	val = 10;
-}
+	// 창 생성
+	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Shapes");
 
-int main(void)
-{
-	int num = 4;
-	// num의 값은 바뀐다.
-	call_by_reference(num);
-	cout << num;
-	return 0;
+	// 원 객체 생성
+	sf::CircleShape circle(100.f);
 }
