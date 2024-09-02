@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="grammar\02-02 함수 오버로딩.cpp" />
+    <ClCompile Include="grammar\02-03 string대입.cpp" />
     <ClCompile Include="grammar\SFML 예제.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
