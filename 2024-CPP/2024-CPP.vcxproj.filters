@@ -18,7 +18,7 @@
     <ClCompile Include="grammar\SFML 예제.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="grammar\03-03 복사 생성자 .cpp">
+    <ClCompile Include="grammar\04-부록.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
