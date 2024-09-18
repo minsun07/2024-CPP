@@ -19,6 +19,18 @@ public:
 		cout << "for문" << g_for_ << endl;
 	}
 
+	// int형 변수를 동적으로 할당하고 그 포인터를 반환하는 함수
+	int* dynamic_allocation_int() {  
+		// int 크기만큼 메모리를 동적으로 할당하고, 그 주소를 ptr에 저장
+		int* ptr = (int*)malloc(sizeof(int));
+		return ptr;
+	}
+
+	// 동적으로 할당된 메모리를 해제하는 함수
+	void free_dynamic_allocation_int(int* ptr) {
+		free(ptr);
+	}
+
 private:
 	bool g_pointer_;
 	bool g_structure_;
@@ -43,6 +55,16 @@ public:
 		cout << "상속" << g_inheritance_ << endl;
 		cout << "참조" << g_reference_ << endl;
 	}
+
+	int* dynamic_allocation_int() {
+		int* ptr = new int;
+		return ptr;
+	}
+
+	void free_dynamic_allocation_int(int* ptr) {
+		delete ptr;
+	}
+
 private:
 	bool g_class_;
 	bool g_inheritance_;
@@ -52,12 +74,11 @@ private:
 int main(void) {
 	C* c = new C(true, true, true, true, true, true);
 	c->print_show();
-
-	delete c;
 	cout << endl;
 	Cpp* cpp = new Cpp(true, true, true, true, true, true, true, true, true);
 	cpp->print_show();
 
+	delete c;
 	delete cpp;
 	return 0;
 }
