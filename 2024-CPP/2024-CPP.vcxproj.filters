@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="grammar\SFML 예제.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="grammar\05-02 상속예제.cpp">
+    <ClCompile Include="grammar\05-03 다형성.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

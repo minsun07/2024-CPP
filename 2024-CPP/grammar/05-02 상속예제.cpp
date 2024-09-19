@@ -57,12 +57,12 @@ public:
 	}
 
 	int* dynamic_allocation_int() {
-		int* ptr = new int;
-		return ptr;
+		int* ptr = new int;  // int 크기만큼 메모리를 동적으로 할당
+		return ptr;          // 할당된 메모리의 시작 주소를 반환
 	}
 
 	void free_dynamic_allocation_int(int* ptr) {
-		delete ptr;
+		delete ptr;    // new로 할당된 메모리를 해제
 	}
 
 private:
