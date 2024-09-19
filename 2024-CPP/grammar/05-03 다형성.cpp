@@ -38,8 +38,9 @@ public:
 		cout << "충성도: " << loyalty_ << endl;
 	}
 
-	void eat() { cout << "왕~왕~" << endl; }
-	void walk() { cout << "촵촵촵촵" << endl; }
+	void bark() override { cout << "울프울프" << endl; }
+	void eat() override{ cout << "왕~왕~" << endl; }
+	void walk() override{ cout << "촵촵촵촵" << endl; }
 
 private:
 	int loyalty_; //충성도
@@ -52,7 +53,9 @@ int main(void) {
 	animal->eat();
 	delete animal;
 
+	
 	animal = new Dog("마루", 5, 2, 100);
+	// 아래 코드가 출력된다.
 	animal-> bark();
 	animal->eat();
 	animal->walk();
