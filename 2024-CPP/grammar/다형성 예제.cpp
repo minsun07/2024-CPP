@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -35,7 +36,7 @@ public:
 
 	void show()
 	{
-		//Food::show();  // 기반 클래스의 멤버 함수를 호출하는 구문
+		Food::show();  // 기반 클래스의 멤버 함수를 호출하는 구문
 		cout << "마늘 : " << garlic_ << endl;
 		cout << "고추 : " << pepper_ << endl;
 	}
@@ -54,7 +55,7 @@ public:
 
 	void show()
 	{
-		//Food::show();
+		Food::show();
 		cout << "젤라틴 : " << gelatin_ << endl;
 		cout << "설탕 : " << sugar_ << endl;
 	}
@@ -73,7 +74,7 @@ public:
 
 	void show()
 	{
-		//Food::show();
+		Food::show();
 		cout << "우유 : " << milk_ << endl;
 		cout << "응고제 : " << rennet_ << endl;
 	}
@@ -87,9 +88,48 @@ void main(void) {
 	Food* player = new Kimchi(15, 95, "갓김치", 86, 100, 100);
 	Food* friends = new Cheese(100, 20, "짜계치", 100, 20, 100);
 
-	player->show();
-	cout << endl << endl;
-	friends->show();
+	while (true) {
+
+		system("cls");
+		cout << "★ 나★" << endl;
+		player->show();
+
+		cout << endl << endl;
+		cout << "★ 상대방★" << endl;
+		friends->show();
+
+		cout << "----------------------------------------------" << endl;
+
+		int select;
+		cout << "1. 공격" << endl;
+		cout << "2. 특수1" << endl;
+		cout << "3. 특수2" << endl;
+		cout << "4. 방어" << endl;
+
+		cin >> select;
+		switch (select) {
+		case 1:
+			// TODO : 공격
+			cout << "공격" << endl;
+			break;
+		case 2:
+			//TODO : 특수1
+			cout << "특수1" << endl;
+			break;
+		case 3:
+			//TODO : 특수2
+			cout << "특수2" << endl;
+			break;
+		case 4:
+			//TODO : 방어
+			cout << "방어" << endl;
+			break;
+		default:
+			cout << "디폴트" << endl;
+		}
+
+		system("pause");
+	}
 
 	delete friends;
 	delete player;
