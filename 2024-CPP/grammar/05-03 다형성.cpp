@@ -40,7 +40,7 @@ public:
 		cout << "Dog 소멸자" << endl;
 	}
 
-	void bark() override { cout << "울프울프" << endl << endl; }
+	void bark() override { cout << "울프울프" << endl; }
 	void eat() override{ cout << "왕~왕~" << endl; }
 	void walk() override{ cout << "촵촵촵촵" << endl; }
 
