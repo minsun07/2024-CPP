@@ -13,8 +13,9 @@ public:
 		cout <<"나이: " <<  age_ << endl;
 		cout << "다리갯수: " << leg_num_ << endl;
 	}
-
-	~Animal() {
+	// virtual을 붙이지 않으면 정적으로 되어 자식(Dog)소멸자가 호출되지x
+	// 다형성을 위해서 반드시 소멸자 앞에 virtual을 붙여야한다.
+	virtual~Animal() {
 		cout << "Animal 소멸자" << endl;
 	}
 
@@ -42,7 +43,7 @@ public:
 		cout << "충성도: " << loyalty_ << endl;
 	}
 
-	~Dog() {
+	virtual~Dog() {
 		cout << "Dog 소멸자" << endl;
 	}
 
@@ -57,5 +58,6 @@ private:
 int main(void) {
 	
 	Animal* animal = new Dog("마루", 5, 2, 100);
+
 	delete animal;
 }
