@@ -14,6 +14,10 @@ public:
 		cout << "다리갯수: " << leg_num_ << endl;
 	}
 
+	~Animal() {
+		cout << "Animal 소멸자" << endl;
+	}
+
 	virtual void walk(void) {
 		cout << "걷다" << endl;
 	}
@@ -38,6 +42,10 @@ public:
 		cout << "충성도: " << loyalty_ << endl;
 	}
 
+	~Dog() {
+		cout << "Dog 소멸자" << endl;
+	}
+
 	void bark() override { cout << "울프울프" << endl; }
 	void eat() override{ cout << "왕~왕~" << endl; }
 	void walk() override{ cout << "촵촵촵촵" << endl; }
@@ -47,17 +55,7 @@ private:
 };
 
 int main(void) {
-	Animal* animal = new Animal("요아조비",8,2);
-	animal->walk();
-	animal->bark();
-	animal->eat();
-	delete animal;
-
 	
-	animal = new Dog("마루", 5, 2, 100);
-	// 아래 코드가 출력된다.
-	animal-> bark();
-	animal->eat();
-	animal->walk();
+	Animal* animal = new Dog("마루", 5, 2, 100);
 	delete animal;
 }
