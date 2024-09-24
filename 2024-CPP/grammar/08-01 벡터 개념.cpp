@@ -6,7 +6,7 @@ using namespace std;
 void main(void) {
 	vector<long long> v;
 
-	// 미리 공간을 많이 확보하자(예약)
+	// 미리 공간을 많이 확보하자(예약) +> 이유: 성능을 위해
 	v.reserve(100);
 
 	// 벡터 추가
