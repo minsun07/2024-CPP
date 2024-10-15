@@ -8,7 +8,7 @@ void main(void) {
 
 	// 미리 공간을 많이 확보하자(예약) +> 이유: 성능을 위해
 	v.reserve(100);
-
+	 
 	// 벡터 추가 (성능에 좋지 않음. 따라서 한번에 다 넣든가 reserve를 해서 공간을 만들어서 해라)
 	v.push_back(4);
 	v.push_back(6);
