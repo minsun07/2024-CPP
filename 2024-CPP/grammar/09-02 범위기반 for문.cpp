@@ -11,14 +11,24 @@ void main(void) {
 	}*/
 
 	vector <int> v = { 445, 14, 27, 456, 23 };
-
-	/*for (int i = 0; i < v.size(); i++) {
-		cout << v[i] << endl;
-	}*/
-
+	
+	// v가 지역변수 이기 때문에 값이 변하지 않는다.
+	for (int value : v) {
+		value *= 10;
+	}
 	for (int value : v) {
 		cout << value << endl;
 	}
+	
+	// 포인터를 사용할 수 없으므로 참조(&)를 사용한다.
+	for (int& value : v) {
+		value *= 10;
+	}
+	for (int value : v) {
+		cout << value << endl;
+	}
+
+
 	
 
 }
