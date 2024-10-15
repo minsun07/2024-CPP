@@ -14,18 +14,18 @@ void main(void) {
 	money["minsun"] = 200;
 
 
-/*	// 반복자
+	// 반복자
 	map<string, long long>::iterator iter;
 
 	// c++에서 iterator은 이진트리이기 때문에 주소값이 뒤죽박죽임. 그래서 < 이 아니라 !=을 사용함.
 	for (iter = money.begin(); iter != money.end(); iter++)  // 결과는 순서가 없음
 		cout << iter->first << "는" << iter->second << endl;  // first는 key, second는 value
-															 // iter은 포인터이기 때문에 -> 를 사용*/
+															 // iter은 포인터이기 때문에 -> 를 사용
 
 	// 실생활에도 auto를 적용해서 더 쉽게 만들 수 있다.
-	for (auto iter = money.begin(); iter != money.end(); iter++) {
+	/*for (auto iter = money.begin(); iter != money.end(); iter++) {
 		cout << iter->first << "는" << iter->second << endl;
-	}
+	}*/
 
 
 	// 값 수정

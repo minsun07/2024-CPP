@@ -18,10 +18,7 @@
     <ClCompile Include="grammar\SFML 예제.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="grammar\09-03 auto.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="grammar\08-02 맵.cpp">
+    <ClCompile Include="grammar\09-04 static.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
