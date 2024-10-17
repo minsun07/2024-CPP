@@ -5,7 +5,7 @@ using namespace std;
 
 enum App {
 	WIDTH = 1200,
-	HEIGHT = 7000
+	HEIGHT = 700
 };
  
 
@@ -22,7 +22,16 @@ void main(void) {
 		RectangleShape player;
 		player.setSize(Vector2f(165.f, 55.f));  //너비, 높이   // Vector2f: 2차원 float의 벡터
 		player.setFillColor(Color::Green);
-		player.setPosition(500.f, 400.f);
+		player.setPosition(App::WIDTH/ 2.f, 600.f);
+
+		if (Keyboard::isKeyPressed(Keyboard::Left))
+			player.move(-10, 0);
+		if (Keyboard::isKeyPressed(Keyboard::Right))
+			player.move(10, 0);
+		if (Keyboard::isKeyPressed(Keyboard::Up))
+			player.move(0, -10);
+		if (Keyboard::isKeyPressed(Keyboard::Down))
+			player.move(0, 10);
 
 		window.clear();
 		window.draw(player);
