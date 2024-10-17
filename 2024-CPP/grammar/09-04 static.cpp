@@ -10,7 +10,10 @@ public:
 		num_++;
 	}
 	// 겟터 만들기
-	static string get_teacher(void) { return teacher_; }
+	static string get_teacher(void) { 
+		//name_ = "유비빔"; // static멤버함수에는 static멤버변수만 사용할 수 있다.(일반 멤버변수 들어가면x)
+		return teacher_; 
+	} 
 	static int get_num(void) { return num_; }
 	string get_name(void) { return name_; }
 
