@@ -11,6 +11,7 @@ enum App {
 
 void main(void) {
 	RenderWindow window(VideoMode(App::WIDTH, App::HEIGHT), "shootingG");
+	window.setFramerateLimit(60);  // 초당 프레임 개수
 
 	RectangleShape player;
 	player.setSize(Vector2f(165.f, 55.f));  //너비, 높이   // Vector2f: 2차원 float의 벡터
