@@ -12,6 +12,11 @@ enum App {
 void main(void) {
 	RenderWindow window(VideoMode(App::WIDTH, App::HEIGHT), "shootingG");
 
+	RectangleShape player;
+	player.setSize(Vector2f(165.f, 55.f));  //너비, 높이   // Vector2f: 2차원 float의 벡터
+	player.setFillColor(Color::Green);
+	player.setPosition(App::WIDTH / 2.f, 600.f);
+
 	while (window.isOpen()) {
 		Event event;
 		while (window.pollEvent(event)) {
@@ -19,11 +24,7 @@ void main(void) {
 				window.close();
 		}
 
-		RectangleShape player;
-		player.setSize(Vector2f(165.f, 55.f));  //너비, 높이   // Vector2f: 2차원 float의 벡터
-		player.setFillColor(Color::Green);
-		player.setPosition(App::WIDTH/ 2.f, 600.f);
-
+		// TODO: 제대로 이동하도록 고치기
 		if (Keyboard::isKeyPressed(Keyboard::Left))
 			player.move(-10, 0);
 		if (Keyboard::isKeyPressed(Keyboard::Right))
